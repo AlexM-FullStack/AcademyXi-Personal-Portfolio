@@ -8,17 +8,17 @@
 }
 
 :root {
-    --primary-color: black;
-    --secondary-color: crimson;
-    --text-color: whitesmoke;
-    --bg-color: rgba(55, 52, 52, 0.712)
+    --primary-color: #edf2f4;
+    --secondary-color: #d90429;
+    --text-color: #212D40;
+    --bg-color: #36415689;
 }
 
 :root.dark-mode {
     --primary-color: black;
-    --secondary-color: rgb(34, 199, 45);
-    --text-color: rgb(236, 13, 109);
-    --bg-color: rgba(55, 52, 52, 0.712)
+    --secondary-color: #D66853;
+    --text-color: whitesmoke;
+    --bg-color: rgba(55, 52, 52, 0.712);
 }
 
 html {
@@ -97,7 +97,7 @@ img {
 }
 
 .hero-nav-links a {
-    color: var(--text-color);
+    color: var(--primary-color);
     font-size: 1.8rem;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -174,17 +174,13 @@ img {
 
 #hero h1:nth-child(2) {
     animation-delay: 2.5s;
-}
-
-#hero h1:nth-child(3) {
     animation: text_reveal_name .5s ease forwards;
-    animation-delay: 3.5s;    
 }
 
 
 @keyframes text_reveal {
     100% {
-        color: var(--text-color);
+        color: var(--primary-color);
         text-shadow: 1px 1px 2px black;
     }
 }
@@ -209,13 +205,14 @@ img {
 
 
 #hero .cta {
-    color: var(--text-color);
+    color: var(--primary-color);
 }
 
 /* projects section */
 
 #projects {
-    background-color: var(--text-color);
+    background-color: var(--primary-color);
+    color: var(--text-color);
 }
 
 #projects h1 {
@@ -239,12 +236,12 @@ img {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: var(--text-color);
+    background-color: var(--bg-card-color);
     height: 600px;
 }
 
 .card:hover {
-    background-color: var(--primary-color);
+    background-color: var(--bg-color);
     color: var(--text-color);
     transition: all 1s ease-in-out;
 }
@@ -310,7 +307,7 @@ img {
 
 /* skills section */
 #skills {
-    background-color: var(--primary-color);
+    background-color: var(--bg-color);
     color: var(--text-color);
 }
 
@@ -443,7 +440,7 @@ svg circle {
 /* about section */
 
 #about {
-    background-color: var(--text-color);
+    background-color: var(--primary-color);
 }
 
 .about-container {
@@ -453,7 +450,8 @@ svg circle {
     align-items: stretch;
     padding: 20px;
     gap: 40px;
-    background-color: var(--text-color);
+    background-color: var(--bg-dark-color);
+    color: var(--text-color);
 }
 
 .about-right {
@@ -472,6 +470,10 @@ svg circle {
     font-size: 2rem;
     padding: 10px 0;
     letter-spacing: 1px;
+}
+
+.about-right a {
+    color: var(--secondary-color)
 }
 
 .about-left {
@@ -499,8 +501,8 @@ svg circle {
 
 /* footer section */
 #footer {
-    background-color: var(--primary-color);
-    color: var(--text-color);
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
 }
 
 .socials {
